@@ -135,11 +135,11 @@ So `\r\n ` ->  `%0d%0a` `\r\n\r`  ->  `%0d%0a%0d`
 
 ![alt text](image-6.png)
 The server Can't understand X-Forwarded-Host header 
-### Try to inject with X-Forwarded-Host
+### Try to inject with Host
 
 ```
 GET /api/games/click_topia HTTP/1.1
-X-Forwarded-Host: dev.apacheblaze.local
+Host: dev.apacheblaze.local
 
 
 GET / HTTP/1.1

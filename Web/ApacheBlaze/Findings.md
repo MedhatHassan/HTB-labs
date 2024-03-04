@@ -1,7 +1,7 @@
 # Solve HTBank 
 #### https://app.hackthebox.com/challenges/ApacheBlaze
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 ##### By directory brute force with dirsearech
 `dirsearch -u http://94.237.58.211:30916/ -x 404,403` 
@@ -11,11 +11,11 @@
 [05:53:27] 200 -  820B  - /cgi-bin/printenv
 
 #### /assets page
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 #### /cgi-bin/test-cgi page
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 #### /cgi-bin/printenv page
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
 ##### nmap scan 
 
@@ -70,11 +70,11 @@ elif game == 'click_topia':
 The code checks if the user choose `click_topia` Game and the request has `X-Forwarded-Host` header with value `dev.apacheblaze.local` it return the flag as a Json.
 
 #### HTTP header manipulation with `X-Forwarded-Host`
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 We got 408 Request Timeout.
 
 ##### Try POST request
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 We got 408 Request Timeout.
 *Note from code `@app.route('/', methods=['GET'])` ONLY `GET` method is allowed*
 
@@ -133,7 +133,7 @@ Referer: http://94.237.54.48:55239/
 Note: `%0A` for newline `\n` and `%0D` for carriage return `\r`
 So `\r\n ` ->  `%0d%0a` `\r\n\r`  ->  `%0d%0a%0d`
 
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 The server Can't understand X-Forwarded-Host header 
 ### Try to inject with Host
 
@@ -165,7 +165,7 @@ Connection: close
 Referer: http://94.237.54.48:55239/
 ```
 
-![alt text](image-7.png)
+![alt text](images/image-7.png)
 ### Resorces
 [HTTP Request Smuggling attack ](https://portswigger.net/web-security/request-smuggling)
 [Http request smuggling via header injection](https://github.com/dhmosfunk/CVE-2023-25690-POC/tree/main#internal-http-request-smuggling-via-header-injection)

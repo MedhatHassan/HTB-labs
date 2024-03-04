@@ -1,0 +1,4 @@
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on tun1, link-type RAW (Raw IP), snapshot length 262144 bytes
+04:42:29.462900 IP 10.129.204.213.47608 > 10.10.14.134.ldap: Flags [S], seq 1676076374, win 64240, options [mss 1340,sackOK,TS val 1289857473 ecr 0,nop,wscale 7], length 0
+04:42:29.462913 IP 10.10.14.134.ldap > 10.129.204.213.47608: Flags [R.], seq 0, ack 1676076375, win 0, length 0

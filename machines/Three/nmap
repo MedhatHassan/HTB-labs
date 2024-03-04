@@ -1,0 +1,37 @@
+nmap -A  -T5  10.129.253.84 
+Starting Nmap 7.94 ( https://nmap.org ) at 2023-07-30 20:33 EDT
+Warning: 10.129.253.84 giving up on port because retransmission cap hit (2).
+Nmap scan report for 10.129.253.84
+Host is up (0.061s latency).
+Not shown: 981 closed tcp ports (conn-refused)
+PORT      STATE    SERVICE       VERSION
+9/tcp     filtered discard
+22/tcp    open     ssh           OpenSSH 7.6p1 Ubuntu 4ubuntu0.7 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 17:8b:d4:25:45:2a:20:b8:79:f8:e2:58:d7:8e:79:f4 (RSA)
+|   256 e6:0f:1a:f6:32:8a:40:ef:2d:a7:3b:22:d1:c7:14:fa (ECDSA)
+|_  256 2d:e1:87:41:75:f3:91:54:41:16:b7:2b:80:c6:8f:05 (ED25519)
+80/tcp    open     http          Apache httpd 2.4.29 ((Ubuntu))
+|_http-title: The Toppers
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+617/tcp   filtered sco-dtmgr
+801/tcp   filtered device
+981/tcp   filtered unknown
+1029/tcp  filtered ms-lsa
+1183/tcp  filtered llsurfup-http
+1328/tcp  filtered ewall
+1580/tcp  filtered tn-tl-r1
+1719/tcp  filtered h323gatestat
+2260/tcp  filtered apc-2260
+3689/tcp  filtered rendezvous
+5060/tcp  filtered sip
+5633/tcp  filtered beorl
+7103/tcp  filtered unknown
+9666/tcp  filtered zoomcp
+12345/tcp filtered netbus
+62078/tcp filtered iphone-sync
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 16.93 seconds
+

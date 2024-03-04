@@ -1,0 +1,37 @@
+dirb http://2million.htb/
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+START_TIME: Wed Aug 16 05:04:55 2023
+URL_BASE: http://2million.htb/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612                                                          
+
+---- Scanning URL: http://2million.htb/ ----
++ http://2million.htb/404 (CODE:200|SIZE:1674)                                                                      
++ http://2million.htb/api (CODE:401|SIZE:0)                                                                         
+==> DIRECTORY: http://2million.htb/assets/                                                                          
+==> DIRECTORY: http://2million.htb/controllers/                                                                     
+==> DIRECTORY: http://2million.htb/css/                                                                             
+==> DIRECTORY: http://2million.htb/fonts/                                                                           
++ http://2million.htb/home (CODE:302|SIZE:0)                                                                        
+==> DIRECTORY: http://2million.htb/images/                                                                          
++ http://2million.htb/invite (CODE:200|SIZE:3859)                                                                   
+==> DIRECTORY: http://2million.htb/js/                                                                              
++ http://2million.htb/login (CODE:200|SIZE:3704)                                                                    
++ http://2million.htb/logout (CODE:302|SIZE:0)                                                                      
++ http://2million.htb/register (CODE:200|SIZE:4527)                                                                 
+==> DIRECTORY: http://2million.htb/views/                                                                           
+                                                                                                                    
+---- Entering directory: http://2million.htb/assets/ ----
+                                                                                                                    
+---- Entering directory: http://2million.htb/controllers/ ----
+                                                                                                                    
+---- Entering directory: http://2million.htb/css/ ----
+==> DIRECTORY: http://2million.htb/css/flags/   

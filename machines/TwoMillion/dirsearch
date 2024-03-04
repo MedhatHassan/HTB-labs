@@ -1,0 +1,33 @@
+dirsearch -u http://2million.htb/ -x 300,404,402 
+
+  _|. _ _  _  _  _ _|_    v0.4.2                                                                                                                     
+ (_||| _) (/_(_|| (_| )                                                                                                                              
+                                                                                                                                                     
+Extensions: php, aspx, jsp, html, js | HTTP method: GET | Threads: 30 | Wordlist size: 10927
+
+Output File: /home/m_1337/.dirsearch/reports/2million.htb/-_23-08-16_05-10-51.txt
+
+Error Log: /home/m_1337/.dirsearch/logs/errors-23-08-16_05-10-51.log
+
+Target: http://2million.htb/
+
+[05:10:51] Starting: 
+[05:10:54] 301 -  162B  - /js  ->  http://2million.htb/js/                 
+[05:11:01] 200 -    2KB - /404                                              
+[05:11:16] 401 -    0B  - /api                                              
+[05:11:16] 401 -    0B  - /api/v1                                           
+[05:11:17] 301 -  162B  - /assets  ->  http://2million.htb/assets/          
+[05:11:17] 403 -  548B  - /assets/                                          
+[05:11:22] 403 -  548B  - /controllers/                                     
+[05:11:23] 301 -  162B  - /css  ->  http://2million.htb/css/                
+[05:11:27] 301 -  162B  - /fonts  ->  http://2million.htb/fonts/            
+[05:11:29] 302 -    0B  - /home  ->  /                                      
+[05:11:29] 301 -  162B  - /images  ->  http://2million.htb/images/          
+[05:11:29] 403 -  548B  - /images/                                          
+[05:11:31] 403 -  548B  - /js/                                              
+[05:11:33] 200 -    4KB - /login                                            
+[05:11:33] 302 -    0B  - /logout  ->  /                                    
+[05:11:43] 200 -    4KB - /register                                         
+[05:11:52] 301 -  162B  - /views  ->  http://2million.htb/views/            
+                                                                             
+Task Completed  

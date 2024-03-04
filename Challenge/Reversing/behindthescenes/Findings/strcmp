@@ -1,0 +1,71 @@
+//Strcmp 1
+void UndefinedFunction_0010132f(void)
+
+{
+  int iVar1;
+  long unaff_RBP;
+  
+  iVar1 = strncmp(*(char **)(*(long *)(unaff_RBP + -0xb0) + 8),"Itz",3);
+  if (iVar1 == 0) {
+    do {
+      invalidInstructionException();
+    } while( true );
+  }
+  do {
+    invalidInstructionException();
+  } while( true );
+}
+
+//strcmp 2
+void UndefinedFunction_0010135b(void)
+
+{
+  int iVar1;
+  long unaff_RBP;
+  
+  iVar1 = strncmp((char *)(*(long *)(*(long *)(unaff_RBP + -0xb0) + 8) + 3),"_0n",3);
+  if (iVar1 == 0) {
+    do {
+      invalidInstructionException();
+    } while( true );
+  }
+  do {
+    invalidInstructionException();
+  } while( true );
+}
+
+//strcmp 3 
+void UndefinedFunction_0010138b(void)
+
+{
+  int iVar1;
+  long unaff_RBP;
+  
+  iVar1 = strncmp((char *)(*(long *)(*(long *)(unaff_RBP + -0xb0) + 8) + 6),"Ly_",3);
+  if (iVar1 == 0) {
+    do {
+      invalidInstructionException();
+    } while( true );
+  }
+  do {
+    invalidInstructionException();
+  } while( true );
+}
+
+//strcmp 4
+void UndefinedFunction_0010138b(void)
+
+{
+  int iVar1;
+  long unaff_RBP;
+  
+  iVar1 = strncmp((char *)(*(long *)(*(long *)(unaff_RBP + -0xb0) + 8) + 6),"UD2",3);
+  if (iVar1 == 0) {
+    do {
+      invalidInstructionException();
+    } while( true );
+  }
+  do {
+    invalidInstructionException();
+  } while( true );
+}

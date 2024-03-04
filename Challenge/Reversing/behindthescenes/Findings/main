@@ -1,0 +1,140 @@
+/*Deassembling :
+0000000000001261 <main>:
+    1261:       f3 0f 1e fa             endbr64
+    1265:       55                      push   rbp
+    1266:       48 89 e5                mov    rbp,rsp
+    1269:       48 81 ec b0 00 00 00    sub    rsp,0xb0
+    1270:       89 bd 5c ff ff ff       mov    DWORD PTR [rbp-0xa4],edi
+    1276:       48 89 b5 50 ff ff ff    mov    QWORD PTR [rbp-0xb0],rsi
+    127d:       64 48 8b 04 25 28 00    mov    rax,QWORD PTR fs:0x28
+    1284:       00 00 
+    1286:       48 89 45 f8             mov    QWORD PTR [rbp-0x8],rax
+    128a:       31 c0                   xor    eax,eax
+    128c:       48 8d 85 60 ff ff ff    lea    rax,[rbp-0xa0]
+    1293:       ba 98 00 00 00          mov    edx,0x98
+    1298:       be 00 00 00 00          mov    esi,0x0
+    129d:       48 89 c7                mov    rdi,rax
+    12a0:       e8 7b fe ff ff          call   1120 <memset@plt>
+    12a5:       48 8d 85 60 ff ff ff    lea    rax,[rbp-0xa0]
+    12ac:       48 83 c0 08             add    rax,0x8
+    12b0:       48 89 c7                mov    rdi,rax
+    12b3:       e8 78 fe ff ff          call   1130 <sigemptyset@plt>
+    12b8:       48 8d 05 6a ff ff ff    lea    rax,[rip+0xffffffffffffff6a]        # 1229 <segill_sigaction>
+    12bf:       48 89 85 60 ff ff ff    mov    QWORD PTR [rbp-0xa0],rax
+    12c6:       c7 45 e8 04 00 00 00    mov    DWORD PTR [rbp-0x18],0x4
+    12cd:       48 8d 85 60 ff ff ff    lea    rax,[rbp-0xa0]
+    12d4:       ba 00 00 00 00          mov    edx,0x0
+    12d9:       48 89 c6                mov    rsi,rax
+    12dc:       bf 04 00 00 00          mov    edi,0x4
+    12e1:       e8 fa fd ff ff          call   10e0 <sigaction@plt>
+    12e6:       0f 0b                   ud2
+    12e8:       83 bd 5c ff ff ff 02    cmp    DWORD PTR [rbp-0xa4],0x2
+    12ef:       74 1a                   je     130b <main+0xaa>
+    12f1:       0f 0b                   ud2
+    12f3:       48 8d 3d 0a 0d 00 00    lea    rdi,[rip+0xd0a]        # 2004 <_IO_stdin_used+0x4>
+    12fa:       e8 d1 fd ff ff          call   10d0 <puts@plt>
+    12ff:       0f 0b                   ud2
+    1301:       b8 01 00 00 00          mov    eax,0x1
+    1306:       e9 2e 01 00 00          jmp    1439 <main+0x1d8>
+    130b:       0f 0b                   ud2
+    130d:       48 8b 85 50 ff ff ff    mov    rax,QWORD PTR [rbp-0xb0]
+    1314:       48 83 c0 08             add    rax,0x8
+    1318:       48 8b 00                mov    rax,QWORD PTR [rax]
+    131b:       48 89 c7                mov    rdi,rax
+    131e:       e8 cd fd ff ff          call   10f0 <strlen@plt>
+    1323:       48 83 f8 0c             cmp    rax,0xc
+    1327:       0f 85 05 01 00 00       jne    1432 <main+0x1d1>
+    132d:       0f 0b                   ud2
+    132f:       48 8b 85 50 ff ff ff    mov    rax,QWORD PTR [rbp-0xb0]
+    1336:       48 83 c0 08             add    rax,0x8
+    133a:       48 8b 00                mov    rax,QWORD PTR [rax]
+    133d:       ba 03 00 00 00          mov    edx,0x3
+    1342:       48 8d 35 d2 0c 00 00    lea    rsi,[rip+0xcd2]        # 201b <_IO_stdin_used+0x1b>
+    1349:       48 89 c7                mov    rdi,rax
+    134c:       e8 6f fd ff ff          call   10c0 <strncmp@plt>
+    1351:       85 c0                   test   eax,eax
+    1353:       0f 85 d0 00 00 00       jne    1429 <main+0x1c8>
+    1359:       0f 0b                   ud2
+    135b:       48 8b 85 50 ff ff ff    mov    rax,QWORD PTR [rbp-0xb0]
+    1362:       48 83 c0 08             add    rax,0x8
+    1366:       48 8b 00                mov    rax,QWORD PTR [rax]
+    1369:       48 83 c0 03             add    rax,0x3
+    136d:       ba 03 00 00 00          mov    edx,0x3
+    1372:       48 8d 35 a6 0c 00 00    lea    rsi,[rip+0xca6]        # 201f <_IO_stdin_used+0x1f>
+    1379:       48 89 c7                mov    rdi,rax
+    137c:       e8 3f fd ff ff          call   10c0 <strncmp@plt>
+    1381:       85 c0                   test   eax,eax
+    1383:       0f 85 97 00 00 00       jne    1420 <main+0x1bf>
+    1389:       0f 0b                   ud2
+    138b:       48 8b 85 50 ff ff ff    mov    rax,QWORD PTR [rbp-0xb0]
+    1392:       48 83 c0 08             add    rax,0x8
+    1396:       48 8b 00                mov    rax,QWORD PTR [rax]
+    1399:       48 83 c0 06             add    rax,0x6
+    139d:       ba 03 00 00 00          mov    edx,0x3
+    13a2:       48 8d 35 7a 0c 00 00    lea    rsi,[rip+0xc7a]        # 2023 <_IO_stdin_used+0x23>
+    13a9:       48 89 c7                mov    rdi,rax
+    13ac:       e8 0f fd ff ff          call   10c0 <strncmp@plt>
+    13b1:       85 c0                   test   eax,eax
+    13b3:       75 62                   jne    1417 <main+0x1b6>
+    13b5:       0f 0b                   ud2
+    13b7:       48 8b 85 50 ff ff ff    mov    rax,QWORD PTR [rbp-0xb0]
+    13be:       48 83 c0 08             add    rax,0x8
+    13c2:       48 8b 00                mov    rax,QWORD PTR [rax]
+    13c5:       48 83 c0 09             add    rax,0x9
+    13c9:       ba 03 00 00 00          mov    edx,0x3
+    13ce:       48 8d 35 52 0c 00 00    lea    rsi,[rip+0xc52]        # 2027 <_IO_stdin_used+0x27>
+    13d5:       48 89 c7                mov    rdi,rax
+    13d8:       e8 e3 fc ff ff          call   10c0 <strncmp@plt>
+    13dd:       85 c0                   test   eax,eax
+    13df:       75 2d                   jne    140e <main+0x1ad>
+    13e1:       0f 0b                   ud2
+    13e3:       48 8b 85 50 ff ff ff    mov    rax,QWORD PTR [rbp-0xb0]
+    13ea:       48 83 c0 08             add    rax,0x8
+    13ee:       48 8b 00                mov    rax,QWORD PTR [rax]
+    13f1:       48 89 c6                mov    rsi,rax
+    13f4:       48 8d 3d 30 0c 00 00    lea    rdi,[rip+0xc30]        # 202b <_IO_stdin_used+0x2b>
+    13fb:       b8 00 00 00 00          mov    eax,0x0
+    1400:       e8 0b fd ff ff          call   1110 <printf@plt>
+    1405:       0f 0b                   ud2
+    1407:       b8 00 00 00 00          mov    eax,0x0
+    140c:       eb 2b                   jmp    1439 <main+0x1d8>
+    140e:       0f 0b                   ud2
+    1410:       b8 00 00 00 00          mov    eax,0x0
+    1415:       eb 22                   jmp    1439 <main+0x1d8>
+    1417:       0f 0b                   ud2
+    1419:       b8 00 00 00 00          mov    eax,0x0
+    141e:       eb 19                   jmp    1439 <main+0x1d8>
+    1420:       0f 0b                   ud2
+    1422:       b8 00 00 00 00          mov    eax,0x0
+    1427:       eb 10                   jmp    1439 <main+0x1d8>
+    1429:       0f 0b                   ud2
+    142b:       b8 00 00 00 00          mov    eax,0x0
+    1430:       eb 07                   jmp    1439 <main+0x1d8>
+    1432:       0f 0b                   ud2
+    1434:       b8 00 00 00 00          mov    eax,0x0
+    1439:       48 8b 4d f8             mov    rcx,QWORD PTR [rbp-0x8]
+    143d:       64 48 33 0c 25 28 00    xor    rcx,QWORD PTR fs:0x28
+    1444:       00 00 
+    1446:       74 05                   je     144d <main+0x1ec>
+    1448:       e8 b3 fc ff ff          call   1100 <__stack_chk_fail@plt>
+    144d:       c9                      leave
+    144e:       c3                      ret
+    144f:       90                      nop
+*/
+// Decompiled : 
+void main(void)
+{
+  long in_FS_OFFSET;
+  sigaction local_a8;
+  undefined8 local_10;
+  
+  local_10 = *(undefined8 *)(in_FS_OFFSET + 0x28);
+  memset(&local_a8,0,0x98);
+  sigemptyset(&local_a8.sa_mask);
+  local_a8.__sigaction_handler.sa_handler = segill_sigaction;
+  local_a8.sa_flags = 4;
+  sigaction(4,&local_a8,(sigaction *)0x0);
+  do {
+    invalidInstructionException();
+  } while( true );
+}

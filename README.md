@@ -5,14 +5,14 @@ This project contains solutions and write-ups for various challenges from the Ha
 
 ![htb](https://miro.medium.com/v2/resize:fit:1400/1*ZNvI3P8tXMgcSmmNXqa0Ig.png)
 ## Table of Contents
+- [Machines](#Machines)
 - [Challenges](#challenges)
 - [Installation](#Installation)
 - [Contributing](#contributing)
 - [Contact](#contact)
+  
 
-## Challenges
-Explore the challenges and their corresponding solutions categorized by topic:
-
+## Machines
 - [Machines](Machines)
   - [Archetype](machines/Archetype)  
   - [Crocodile](machines/Crocodile)
@@ -28,6 +28,9 @@ Explore the challenges and their corresponding solutions categorized by topic:
   - [Unified](machines/Unified)
   - [Vaccine](machines/Vaccine)
 
+## Challenges
+Explore the challenges and their corresponding solutions categorized by topic:
+
 - [Web](Web/bypasstheworld/Findings.md)
   - [HTBank](Challenge/Web/HTBank/Findings.md)
   - [ApacheBlaze](Challenge/Web/ApacheBlaze/Findings.md)
@@ -36,7 +39,7 @@ Explore the challenges and their corresponding solutions categorized by topic:
   - [BehinedTheSenes](Challenge/Reversing/behindthescenes/Findings/Findings.md)   
 
 ## Description
-Provide a brief overview of what your project does, why it exists, and how it can benefit users. Be concise but informative.
+My findings and walkthrough for  challenging Machines and Challenges. In all of my writeups, I explained walkthrough of the challenge and detail the exploitation process, including the use of CVEs , Codes , vulnerabilities and more.
 
 ## Installation
 How to install All the writeups:

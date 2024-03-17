@@ -1,5 +1,5 @@
-#Behiend the scenes 
-##https://app.hackthebox.com/challenges/Behind%20the%20Scenes
+# Behiend the scenes 
+## https://app.hackthebox.com/challenges/Behind%20the%20Scenes
 Frist try to analyze all the strings in the file via :
 ```strings behindthescenes```
 <i>Note: the output is in strings file.</i>

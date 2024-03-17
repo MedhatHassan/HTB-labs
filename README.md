@@ -13,18 +13,27 @@ This project contains solutions and write-ups for various challenges from the Ha
 ## Challenges
 Explore the challenges and their corresponding solutions categorized by topic:
 
-- [Reverse Engineering](ReverseEngineering)
-  - [Bruteforce Me](ReverseEngineering/Bruteforce%20Me/Findings.md)   
-  - [Eye of Sauron](ReverseEngineering/EyeofSauron/Findings.md)   
-  - [Find the pass](ReverseEngineering/Find%20the%20Pass/Findings.md)   
-  - [GUI I](ReverseEngineering/GUI_I/Findings.md)   
-  - [Get rid of them all](ReverseEngineering/Get-rid-of-them-all/Findings.md)   
-  - [Pure-Luck](ReverseEngineering/Pure-Luck/Findings.md)   
-  - [Getting started](ReverseEngineering/getting-started/Findings.md)   
 - [Machines](Machines)
-  - [Shadower](Machines/shadower/Findings.md)  
-  - [Bruteforce Me](Machines/version/Findings.md)  
-- [web](Web/bypasstheworld/Findings.md)
+  - [Archetype](machines/Archetype)  
+  - [Crocodile](machines/Crocodile)
+  - [Dancing](machines/Dancing)
+  - [Fwan](machines/Fawn)
+  - [Keeper](machines/Keeper)
+  - [Oopsie](machines/Oopsie)
+  - [Pilgrimage](machines/Pilgrimage)
+  - [Redeemer](machines/Redeemer)
+  - [Responder](machines/Responder)
+  - [Three](machines/Three)
+  - [TwoMillion](machines/TwoMillion/Findings.md)
+  - [Unified](machines/Unified)
+  - [Vaccine](machines/Vaccine)
+
+- [Web](Web/bypasstheworld/Findings.md)
+  - [HTBank](Challenge/Web/HTBank/Findings.md)
+  - [ApacheBlaze](Challenge/Web/ApacheBlaze/Findings.md)
+- [Reverse Engineering](Challenge/Reversing)
+  - [SimpleEncryptor](Challenge/Reversing/SimpleEncryptor/Findings/Findings.md)
+  - [BehinedTheSenes](Challenge/Reversing/behindthescenes/Findings/Findings.md)   
 
 ## Description
 Provide a brief overview of what your project does, why it exists, and how it can benefit users. Be concise but informative.
@@ -37,7 +46,7 @@ How to install All the writeups:
 3. Review the solution files , codes and write-ups to understand the approach and techniques used to solve the challenges.
 4. Enjoy 😉
 
-# Contributing
+## Contributing
 Contributions are welcome! If you have additional write-ups or solutions for challenges that are not covered, feel free to contribute.
 
 # Contact

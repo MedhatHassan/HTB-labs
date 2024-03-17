@@ -176,7 +176,7 @@ DB_DATABASE=htb_prod
 DB_USERNAME=admin
 DB_PASSWORD=SuperDuperPass123
 
-We find **admin password **
+We find **admin password**
 ssh to admin with the password
 
 user flag => a2624f25c7983f33de70b88f7b290710

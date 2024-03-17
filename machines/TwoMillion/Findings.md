@@ -181,8 +181,8 @@ ssh to admin with the password
 
 user flag => a2624f25c7983f33de70b88f7b290710
 
-in /var/mail/admin
-
+in `/var/mail/admin`
+```
 From: ch4p <ch4p@2million.htb>
 To: admin <admin@2million.htb>
 Cc: g0blin <g0blin@2million.htb>
@@ -196,5 +196,5 @@ Hey admin,
 I'm know you're working as fast as you can to do the DB migration. While we're partially down, can you also upgrade the OS on our web host? There have been a few serious Linux kernel CVEs already this year. That one in OverlayFS / FUSE looks nasty. We can't get popped by that.
 
 HTB Godfather
-
+```
 root.txt => f3f590b486fa536eb258bc4abf59e107

@@ -8,7 +8,6 @@ This project contains solutions and write-ups for various challenges from the Ha
 - [Challenges](#challenges)
 - [Installation](#Installation)
 - [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
 ## Challenges
@@ -37,6 +36,9 @@ How to install All the writeups:
 2. Navigate to the project directory: `cd HTB-labs`
 3. Review the solution files , codes and write-ups to understand the approach and techniques used to solve the challenges.
 4. Enjoy 😉
+
+# Contributing
+Contributions are welcome! If you have additional write-ups or solutions for challenges that are not covered, feel free to contribute.
 
 # Contact
 If you have any questions or suggestions, feel free to reach out

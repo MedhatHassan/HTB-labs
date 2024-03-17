@@ -1,4 +1,4 @@
-#Simple Encryptor
+# Simple Encryptor
 ### https://app.hackthebox.com/challenges/simple-encryptor
 
 Basic info about the file via `file encrypt`

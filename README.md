@@ -4,6 +4,10 @@
 This project contains solutions and write-ups for various challenges from the Hack The Box platform.
 
 ![htb](https://miro.medium.com/v2/resize:fit:1400/1*ZNvI3P8tXMgcSmmNXqa0Ig.png)
+
+## Description
+My findings and walkthrough for  challenging Machines and Challenges. In all of my writeups, I explained walkthrough of the challenge and detail the exploitation process, including the use of CVEs , Codes , vulnerabilities and more.
+
 ## Table of Contents
 - [Machines](#Machines)
 - [Challenges](#challenges)
@@ -38,8 +42,6 @@ Explore the challenges and their corresponding solutions categorized by topic:
   - [SimpleEncryptor](Challenge/Reversing/SimpleEncryptor/Findings/Findings.md)
   - [BehinedTheSenes](Challenge/Reversing/behindthescenes/Findings/Findings.md)   
 
-## Description
-My findings and walkthrough for  challenging Machines and Challenges. In all of my writeups, I explained walkthrough of the challenge and detail the exploitation process, including the use of CVEs , Codes , vulnerabilities and more.
 
 ## Installation
 How to install All the writeups:

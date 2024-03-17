@@ -167,10 +167,10 @@ Referer: http://94.237.54.48:55239/
 
 ![alt text](images/image-7.png)
 ### Resorces
-[HTTP Request Smuggling attack ](https://portswigger.net/web-security/request-smuggling)
-[Http request smuggling via header injection](https://github.com/dhmosfunk/CVE-2023-25690-POC/tree/main#internal-http-request-smuggling-via-header-injection)
-[CVE 2023 25690 POC](https://github.com/dhmosfunk/CVE-2023-25690-POC)
-[URL encoding of newline](https://stackoverflow.com/questions/3871729/transmitting-newline-character-n)
+- [HTTP Request Smuggling attack ](https://portswigger.net/web-security/request-smuggling)
+- [Http request smuggling via header injection](https://github.com/dhmosfunk/CVE-2023-25690-POC/tree/main#internal-http-request-smuggling-via-header-injection)
+- [CVE 2023 25690 POC](https://github.com/dhmosfunk/CVE-2023-25690-POC)
+- [URL encoding of newline](https://stackoverflow.com/questions/3871729/transmitting-newline-character-n)
 
 
 >Find More on ==> github.com/MedhatHassan
